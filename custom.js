@@ -59,7 +59,7 @@ function createErrorCard(msg){
     main.innerHTML = cardHTML
 }
 
-function addReposeToCard(repos){
+function addReposToCard(repos){
     const reposEl = document.getElementById('repos')
 
     repos 
@@ -71,7 +71,19 @@ function addReposeToCard(repos){
         repoEl.target = '_blank'
         repoEl.innerHTML = repo.name
 
-        repoEl.appendChild(repoEl)
+        reposEl.appendChild(repoEl)
     })
 }
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const user = search.value
+
+    if(user){
+        getUser(user)
+
+        search.value = ''
+    }
+})
 
