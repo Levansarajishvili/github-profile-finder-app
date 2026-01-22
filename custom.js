@@ -49,5 +49,13 @@ function createUserCard(user) {
     main.innerHTML = cardHTML
 }
 
+function createErrorCard(msg){
+    const cardHTML = `
+    <div class="card">
+    <h1>${msg}</h1>
+    </div>
+    `
 
+    main.innerHTML = cardHTML
+}
 
